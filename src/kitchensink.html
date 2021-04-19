@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/bootstrap-d989a3f5b1f1bca0585c204acf93e7e781ab3db1f16f403a5e77336f1c4d4c0f.css" data-turbolinks-track="true" /><link href="https://themes2.teachablecdn.com/themecss/production/base.css?_=eb67aca9da0a&amp;brand_course_heading=%23ffffff&amp;brand_heading=%232b3636&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%232b3636&amp;brand_secondary=%2309A59A&amp;brand_text=%232b3636&amp;logged_out_homepage_background_image_overlay=0.0&amp;show_login=true&amp;show_signup=true" rel="stylesheet" data-turbolinks-track="true"></link> -->
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/main.js"></script>
+</head>
+<body>
+  <h1>Kitchensink - Practice Page</h4>
+    <div class="block large-row-spacer">
+      <a href="index.html">< Back</a>
+    </div>
+  <br />
+  <div class="block large-row-spacer">
+    
+    <div class="left-align" id="radio-btn-example">
+      <fieldset>
+        <legend>Radio Button Example</legend>
+        <label for="bmw">
+        <input id="bmwradio" value="bmw" name="cars" type="radio"> BMW
+        </label>
+        <label for="benz">
+        <input id="benzradio" value="benz" name="cars" type="radio"> Benz
+        </label>
+        <label for="honda">
+        <input id="hondaradio" value="honda" name="cars" type="radio"> Honda
+        </label>
+      </fieldset>
+    </div>
+    <div class="cen-left-align" id="select-class-example">
+      <fieldset>
+        <legend>Select Class Example</legend>
+        <select id="carselect" name="cars">
+          <option value="bmw">BMW</option>
+          <option value="benz">Benz</option>
+          <option value="honda">Honda</option>
+        </select>
+      </fieldset>
+    </div>
+    <div class="cen-right-align">
+      <fieldset>
+        <legend>Multiple Select Example</legend>
+        <select multiple="" size="3" id="multiple-select-example" name="multiple-select-example">
+          <option value="apple">Apple</option>
+          <option value="orange">Orange</option>
+          <option value="peach">Peach</option>
+        </select>
+      </fieldset>
+    </div>
+    <div class="right-align" id="checkbox-example">
+      <fieldset>
+        <legend>Checkbox Example</legend>
+        <label for="bmw">
+        <input id="bmwcheck" value="bmw" name="cars" type="checkbox"> BMW
+        </label>
+        <label for="benz">
+        <input id="benzcheck" value="benz" name="cars" type="checkbox"> Benz
+        </label>
+        <label for="honda">
+        <input id="hondacheck" value="honda" name="cars" type="checkbox"> Honda
+        </label>
+      </fieldset>
+    </div>
+  </div>
+  <div class="block large-row-spacer">
+    <div class="left-align">
+      <fieldset>
+        <legend>Switch to Window Example</legend>
+        <button id="openwindow" class="btn btn-sm btn-primary class1" onclick="openWindow()">Open Window</button>
+      </fieldset>
+    </div>
+    <div class="cen-left-align">
+      <fieldset>
+        <legend>Switch to Tab Example</legend>
+        <a id="opentab" class="btn btn-sm btn-primary class1 class2" href="https://met.hu" target="_blank">Open Tab</a>
+      </fieldset>
+    </div>
+    <div class="cen-right-align">
+      <fieldset>
+        <legend>Switch To Alert Example</legend>
+        <input id="name" name="enter-name" class="inputs" placeholder="Enter Your Name" type="text">
+        <input id="alertbtn" class="btn btn-sm btn-primary" value="Alert" onclick="displayAlert()" type="submit">
+        <input id="confirmbtn" class="btn btn-sm btn-primary" value="Confirm" onclick="displayConfirm()" type="submit">
+      </fieldset>
+    </div>
+  </div>
+  <div class="block large-row-spacer">
+    <div class="left-align">
+      <fieldset style="margin-bottom:60px">
+        <legend>Mouse Hover Example</legend>
+        <div class="mouse-hover">
+          <button id="mousehover" class="dropbtn">Mouse Hover</button>
+          <div class="mouse-hover-content">
+            <a href="#top">Top</a>
+            <a href="">Reload</a>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="cen-left-align">
+      <fieldset style="margin-bottom:60px">
+        <legend>Visibility Example</legend>
+        <input class="btn btn-primary  disabled" value="Visible/Enabled" onclick="displayAlert()" type="submit"><br />
+        <input class="btn btn-secondary" value="Visible/Disabled" disabled="true" onclick="displayAlert()" aria-disabled="true" type="submit"><br />
+        <input class="btn btn-secondary" value="Invisible" style="display: none;" onclick="displayAlert()" type="submit"><br />
+        <input class="btn btn-danger  disabled" value="Another button" onclick="displayAlert()" type="submit"><br />
+        <input class="btn btn-secondary" value="Gone" style="visibility: hidden;" onclick="displayAlert()" type="submit"><br />
+        <input class="btn btn-warning  disabled" value="Yet Another button" onclick="displayAlert()" type="submit"><br />
+
+      </fieldset>
+    </div>
+    <div class="right-align">
+      <fieldset>
+        <legend>Element Displayed Example</legend>
+        <input id="hide-textbox" class="btn btn-sm btn-primary class2" value="Hide" onclick="hideElement()" type="submit">
+        <input id="show-textbox" class="btn btn-sm btn-primary class2" value="Show" onclick="showElement()" type="submit">
+        <br><br>
+        <input id="displayed-text" name="show-hide" class="inputs displayed-class" placeholder="Hide/Show Example" type="text">
+      </fieldset>
+    </div>
+   
+  </div>
+  <div class="block large-row-spacer">
+    <div class="left-align">
+      <fieldset>
+        <legend>Web Table Example</legend>
+        <table id="product" name="courses" class="table-display" border="1">
+        <tbody>
+        <tr>
+          <th>Author</th>
+          <th>Course</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+        <tr>
+          <td>Tamas</td>
+          <td>Selenium WebDriver</td>
+          <td>35</td>
+          <td><button class="btn btn-sm btn-danger delete-row-btn" >Delete</button></td>
+        </tr>
+        <tr>
+          <td>Peter</td>
+          <td>Python Programming</td>
+          <td>30</td>
+          <td><button class="btn btn-sm btn-danger delete-row-btn" >Delete</button></td>
+        </tr>
+        <tr>
+          <td>Anna</td>
+          <td>JavaScript Programming</td>
+          <td>25</td>
+          <td><button class="btn btn-sm btn-danger delete-row-btn" >Delete</button></td>
+        </tr>
+        </tbody>
+        </table>
+      </fieldset>
+    </div>
+  </div>
+  <div class="block large-row-spacer">
+    <fieldset>
+      <legend>iFrame Example</legend>
+      <iframe src='//beepulo.idokep.hu/futar/Budapest' scrolling='no' style='width:300px;height:260px;border:none;'></iframe>
+      <iframe id="met-iframe" src="https://met.hu" name="iframe-name" style="width: 100%; height: 600px" scrolling="yes" marginwidth="0" marginheight="0" vspace="0" hspace="0" frameborder="0">
+      </iframe>
+    </fieldset>
+  </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+    
+
+    
+  
+</body>
+</html>

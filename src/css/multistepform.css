@@ -1,0 +1,193 @@
+/* Reset */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap");
+:root {
+  font-size: 16px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header, nav, main, section, article, aside, time, footer {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 0 15px;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.75rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+form {
+  margin-bottom: 15px;
+}
+
+form fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: auto;
+  border: none;
+  min-inline-size: 100%;
+}
+
+form fieldset legend {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  border: none;
+  visibility: hidden;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea,
+select,
+button {
+  display: block;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  width: 100%;
+  font: inherit;
+}
+
+input[type=submit],
+input[type=button],
+input[type=reset],
+input[type=checkbox],
+input[type=radio],
+button {
+  display: inline-block;
+  width: auto;
+}
+
+ul, ol {
+  margin: 0 0 15px 25px;
+  padding: 0;
+}
+
+ul li, ol li {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+    Styles
+*/
+body {
+  padding: 20px;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.2;
+  background-color: #f3f3f3;
+}
+
+h1 {
+  padding-bottom: 10px;
+  font-weight: 400;
+}
+
+button {
+  padding: 10px 15px;
+  color: #ffffff;
+  background-color: #7755dd;
+  border: 0;
+  cursor: pointer;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.form-wizard {
+  padding: 40px 50px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.step {
+  display: none;
+}
+
+.step.is-active {
+  display: block;
+}
+
+.input-group {
+  padding-bottom: 10px;
+}
+
+.input-group.has-error .form-control {
+  border-color: #ff3355;
+}
+
+.form-control {
+  padding: 10px 15px;
+  border: 1px solid #777777;
+}
+
+.btn-prev {
+  display: none;
+}
+
+.btn-prev.is-active {
+  display: inline-block;
+}
+
+.progress-bar {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 2px;
+  background-color: #7755dd;
+  transform-origin: left center;
+  transform: scaleX(0.01);
+  transition: transform 0.2s ease;
+}

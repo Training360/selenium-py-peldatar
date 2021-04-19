@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Stuff you can do with CSS pointer events</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.css'>
+<link rel="stylesheet" href="css/mousehover.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="containter p-3 p-md-5">
+  <div class="mb-5">
+    <h1 class="h4">
+      Stuff you can do with <code>pointer-events</code>
+    </h1>
+    <p>
+      <code>pointer-events</code> is mostly used to bypass click events on an element. But did you know you can reset the pointer events of descendant elements? This allows us to do some interesting things&hellip;
+    </p>
+    <p class="small text-muted">
+      (Bootstrap is included in this pen for basic styling)
+    </p>
+  </div>
+  
+  <div class="my-5">
+    <h2 class="h5">
+      1. Change styling of a parent on hover
+    </h2>
+    <p>
+      The hover styling of the card is not set unless the button is hovered. Keep in mind this technique disables the ability to open the image-specific context menu when the image is right-clicked (Thanks Šime Vidas for  <a href="https://twitter.com/simevidas/status/1020867060614811649" target="_blank">pointing that out</a>).
+    </p>
+
+    <div class="card change-parent-style">
+      <img class="card-img-top" height="180" width="286" alt="100%x180" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_164b14928b4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_164b14928b4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.203125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+      <div class="card-body">
+        <h5 class="h6 card-title">Card title</h5>
+        <p class="card-text">Hover the button below to see the effect in action.</p>
+        <button class="btn btn-primary js-btn">
+          Hover me
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="my-5">
+    <h2 class="h5">
+      2. Change styling of another element
+    </h2>
+    <p>
+      Style the text of the sibling card when the button is hovered.
+    </p>
+    
+    <div class="d-flex flex-wrap change-element-style">
+
+      <div class="card mb-3 mr-3">
+        <img class="card-img-top" height="180" width="286" alt="100%x180" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_164b14928b4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_164b14928b4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.203125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+        <div class="card-body">
+          <h5 class="h6 card-title">Card 1</h5>
+          <button class="btn btn-primary js-btn">
+            Hover me
+          </button>
+        </div>
+      </div>
+      
+      <div class="card mb-3 mr-3">
+        <img class="card-img-top" height="180" width="286" alt="100%x180" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_164b14928b4%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_164b14928b4%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.203125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+        <div class="card-body">
+          <h5 class="h6 card-title">Card 2</h5>
+          <p class="card-text element">This text changes color if the button in card 1 is hovered.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <div class="my-5">
+    <h2 class="h5">
+      3. Only make the pseudo element clickable
+    </h2>
+    <p>
+      Only the <b class="text-danger">&cross;</b> is clickable. <span class="text-muted small">(Doesn't work in Firefox, see <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1177528" target="_blank">this bug</a>.)</span>
+    </p>
+    <button class="btn-x js-btn">
+      Filter
+    </button>
+  </div>
+  
+  <div class="my-5">
+    <h2 class="h5">
+      4. Only make the path clickable.
+    </h2>
+    <p>
+      <code>pointer-events: visiblePainted</code> can be used to only make the path interactive.
+    </p>
+    <svg aria-hidden="true" width="384" height="512" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="img-fluid"><path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z" class="svg"></path></svg>
+    <p class="small">
+      Icon from <a href="https://fontawesome.com/icons/html5?style=brands" target="_blank" rel="noopener">Font Awesome</a>
+    </p>
+  </div>
+  
+  <div class="mt-5">
+    <h2 class="h5">
+      That's all folks!
+    </h2>
+    <p>
+      xoxo <a href="https://twitter.com/Martijn_Cuppens">@Martijn_Cuppens</a>
+    </p>
+    <p class="small mt-4">
+      PS. make sure to check out <a href="https://github.com/project-rfs/rfs">RFS</a> to control your responsive font sizes.
+    </p>
+  </div>
+</div>
+<!-- partial -->
+  
+</body>
+</html>

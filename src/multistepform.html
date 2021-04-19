@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Vanilla JavaScript Multi Step Form [ES6]</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/multistepform.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="wrapper">
+
+    <form name="register" action="javascript:alert(this.nodeType);" method="get" id="form_wizard_1" class="form-wizard js-form-wizard" novalidate>
+        <h1>Register</h1>
+
+        <fieldset class="step js-step">
+            <legend>Name</legend>
+            <div class="input-group js-input-group">
+                <label for="first_name">First name</label>
+                <input type="text" name="first_name" id="first_name" class="form-control js-form-control" required>
+            </div>
+            <div class="input-group js-input-group">
+                <label for="last_name">Last name</label>
+                <input type="text" name="last_name" id="last_name" class="form-control js-form-control" required>
+            </div>
+        </fieldset>
+
+        <fieldset class="step js-step">
+            <legend>Contact Info</legend>
+            <div class="input-group js-input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control js-form-control" required>
+            </div>
+            <div class="input-group js-input-group">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" class="form-control js-form-control" required>
+            </div>
+        </fieldset>
+
+        <fieldset class="step js-step">
+            <legend>Birthday</legend>
+            <div class="input-group js-input-group">
+                <label for="dob">Date of birth</label>
+                <input type="date" name="dob" id="dob" class="form-control js-form-control" required>
+            </div>
+        </fieldset>
+
+        <fieldset class="step js-step">
+            <legend>Login Info</legend>
+            <div class="input-group js-input-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" class="form-control js-form-control" required>
+            </div>
+            <div class="input-group js-input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control js-form-control" required>
+            </div>
+        </fieldset>
+
+        <div class="input-group text-right">
+            <button type="button" class="btn-prev js-btn-prev">Prev</button>
+            <button type="button" class="js-btn-next" data-step-text="Next" data-final-step-text="Submit">Next</button>
+        </div>
+
+        <div class="progress-bar js-progress-bar"></div>
+    </form>
+
+</div>
+<!-- partial -->
+  <script  src="js/multistepform.js"></script>
+
+</body>
+</html>

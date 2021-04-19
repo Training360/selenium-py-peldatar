@@ -1,0 +1,220 @@
+h1 {
+    margin-bottom: 30px;
+  }
+
+  select {
+    font-size: 14px;
+    width: 120px;
+    height: 30px;
+    border: 2px solid #39949a;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+  #multiple-select-example {
+    height: 75px;
+  }
+
+  .dropbtn {
+    background-color: #39949a; /* #4CAF50; */
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  .btn-style {
+    background-color: #39949a;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+  }
+
+  /* The container <div> - needed to position the mouse-hover content */
+  .mouse-hover {
+    /* position: relative;
+    display: inline-block; */
+  }
+
+  /* mouse-hover Content (Hidden by Default) */
+  .mouse-hover-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+
+  /* Links inside the mouse-hover */
+  .mouse-hover-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of mouse-hover links on hover */
+  .mouse-hover-content a:hover {
+    background-color: #f1f1f1
+  }
+
+  /* Show the mouse-hover menu on hover */
+  .mouse-hover:hover .mouse-hover-content {
+    display: block;
+  }
+
+  /* Change the background color of the mouse-hover button when the mouse-hover content is shown */
+  .mouse-hover:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+
+  fieldset {
+    font-size: 14px;
+    /* border: 2px solid #000; */
+    /*padding: 1em;*/
+    padding: .2em;
+    border-radius: 0.5em;
+  }
+
+  legend {
+    font-size: 14px;
+    width: auto;
+    color: #fff;
+    background: #2b3636;
+    padding: 0.25em 1em;
+    border-radius: 1em;
+  }
+
+  /* One radio button per line */
+  label {
+    display: block;
+    cursor: pointer;
+    line-height: 2;
+    font-size: 1em;
+  }
+
+  body {
+    font-family:"Trebuchet MS", Arial, sans-serif;
+  }
+
+  #product{
+    font-family:"Trebuchet MS", Arial, sans-serif;
+    width:400px;
+    border-collapse:separate;
+    /* border-spacing:10px; */
+    /* margin-left: 200px; */
+  }
+
+  #product td, #product th{
+    border:1px solid #39949a; /* #4CAF50; */
+    padding:3px 7px 2px 7px;
+    font-size:1em;
+  }
+
+  #product th{
+    font-size:1.1em;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color: #39949a;
+    color: #fff;
+    color: antiquewhite
+  }
+
+  .left-align {
+    float: left;
+  }
+
+  .right-align{
+      font-family:"Trebuchet MS", Arial, sans-serif;
+      /*width:400px; */
+      /*margin-left: 100px;*/
+      float: right;
+  }
+
+  .cen-align{
+    font-family:"Trebuchet MS", Arial, sans-serif;
+    /*width:400px; */
+    margin-left: 150px;
+    margin-right: 100px;
+    float: left;
+  }
+
+  .cen-left-align{
+    font-family:"Trebuchet MS", Arial, sans-serif;
+    /*width:400px; */
+    margin-left: 70px;
+    margin-right: 30px;
+    float: left;
+  }
+
+  .cen-right-align{
+          font-family:"Trebuchet MS", Arial, sans-serif;
+          /*width:400px; */
+          margin-left: 60px;
+    margin-right: 30px;
+          float: left;
+  }
+
+  .block{
+    width: 900px;
+    position: relative;
+    display: inline-block;
+    margin: 0px 0px 2px 20px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    text-align: justify;
+    border-bottom: .5px solid;
+    border-bottom-color: #2b3636;
+  }
+
+  .table-display{
+    width:400px;
+    padding: .5em;
+    margin: 0px 20px 20px 10px;
+  }
+
+  .default-row-spacer{
+    margin-bottom: 10px;
+  }
+
+  .large-row-spacer{
+    margin-bottom: 20px;
+  }
+
+  inputs:-webkit-input-placeholder {
+    color: #b5b5b5;
+  }
+
+  inputs-moz-placeholder {
+    color: #b5b5b5;
+  }
+
+  .inputs {
+    background: #f5f5f5;
+    font-size: 14px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: none;
+    padding: 13px 10px;
+    /* width: 270px; */
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 3px rgba( 0, 0, 0, 0.1 );
+    clear: both;
+  }
+
+  .inputs:focus {
+    background: #fff;
+    box-shadow: 0 0 0 3px #39949a, inset 0 2px 3px rgba( 0, 0, 0, 0.2 ), 0px 5px 5px rgba( 0, 0, 0, 0.15 );
+    outline: none;
+  }

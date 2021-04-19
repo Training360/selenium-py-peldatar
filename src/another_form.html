@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Vanilla JS form to table</title>
+  <link rel="stylesheet" href="css/another_form.css">
+
+</head>
+<body>
+
+<main role="main" aria-labelledBy="pageHeading">
+
+  <h1 id="pageHeading">Contact Submission Form</h1>
+
+  <form id="contactForm">
+    <legend>Contact Details</legend>
+    <div>
+      <label for="fullname">Name:</label>
+      <input type="text" name="fullname" id="fullname" placeholder="your name" required aria-required="true" aria-label="input your name" aria-placeholder="your name">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" placeholder="your email" required aria-required="true" aria-label="input your email" aria-placeholder="your email">
+    </div>
+    <div>
+      <label for="dob">DoB:</label>
+      <input type="date" name="dob" id="dob" min="1900-01-01" max="2020-01-01" pattern="\d{4}-\d{2}-\d{2}" aria-label="input your date of birth">
+    </div>
+    <div>
+      <label for="phone">Phone:</label>
+      <input type="tel" name="phone" id="phone" placeholder="your number" pattern="[0-9]{5} [0-9]{6}" aria-label="input your phone number" aria-placeholder="your number">
+      <small>Format: 01234 567890</small>
+    </div>
+    <input type="submit"></input>
+  </form>
+  <br/>
+  <div>
+    <table id="detailsTable">
+      <caption>Your submitted contact details</caption>
+      <tr>
+        <th arial-label="column Name">Name</th>
+        <th arial-label="column Email">Email</th>
+        <th arial-label="column DoB">DoB</th>
+        <th arial-label="column Phone">Phone</th>
+        <th arial-label="columen delete row"></th>
+      </tr>
+    </table>
+    <br/>
+    <button>Export HTML table to CSV file</button>
+    <!-- partial -->
+    <script  src="js/exporttofile.js"></script>
+  </div>
+</main>
+  <script  src="js/another_form.js"></script>
+
+</body>
+</html>

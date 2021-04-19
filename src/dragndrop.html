@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Kanban</title>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/foundation/6.2.0/foundation.min.css'>
+  <link rel="stylesheet" href="css/dragndrop.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div ng-app="kanban">
+  <div ui-view></div>
+
+  <!--  Templates  -->
+  <script id="/templates/lists.html" type="text/ng-template">
+    <div ng-repeat="list in vm.lists" class="list medium-3 columns">
+      <div class="inner">
+        <h2 class="title">{{list.title}}</h2>
+        <ul dnd-list="list.items" class="items no-bullet">
+
+          <li ng-repeat="item in list.items" dnd-draggable="item" dnd-moved="list.items.splice($index, 1)" dnd-effect-allowed="move" dnd-selected="vm.lists.selected = item" ng-class="{'selected': models.selected === item}" class="item">
+
+            <a ui-sref="lists.items-show({listId: '{{list.id}}', itemId: '{{item.id}}'})">
+              <h3 class="title">{{item.title}}</h3>
+              <p class="description">{{item.description}}</p>
+            </a>
+
+          </li>
+        </ul>
+        <a ui-sref="lists.items-form({ listId: '{{list.id}}' })">Add a Card</a>
+      </div>
+    </div>
+    <a href="#">Add a List</a>
+    <div ui-view></div>
+  </script>
+
+  <script id="/templates/items-show.html" type="text/ng-template">
+    <div class="item-view item-show">
+      <a ui-sref="lists" style="float:right">X</a>
+      <h1>{{vm.item.title}}</h1>
+      <p>{{vm.item.description}}</p>
+      <p><a ui-sref="lists.items-form({ listId: '{{list.id}}', itemId: '{{item.id}}' })">Edit</a></p>
+    </div>
+    <div class="item-view-overlay" ui-sref="lists"></div>
+  </script>
+
+  <script id="/templates/items-form.html" type="text/ng-template">
+    <div class="item-view item-new">
+      <ul ng-if="vm.card.errors.length" class="no-bullet callout alert clearfix">
+        <li ng-repeat="error in vm.card.errors">{{error}}</li>
+      </ul>
+      <a ui-sref="lists" style="float:right">X</a>
+      <label for="title">Title</label>
+      <input ng-model="vm.card.title" name="title" type="text" placeholder="Title" />
+      <label for="description">Description</label>
+      <textarea ng-model="vm.card.description" name="description" cols="30" rows="5" placeholder="Description..."></textarea>
+      <button ng-click="vm.saveCard()" class="button primary">Save</button>
+    </div>
+    <div class="item-view-overlay" ui-sref="lists"></div>
+  </script>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-alpha.5/angular-ui-router.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-drag-and-drop-lists/1.4.0/angular-drag-and-drop-lists.min.js'></script>
+<script  src="js/dragndrop.js"></script>
+
+</body>
+</html>

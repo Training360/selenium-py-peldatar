@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+    webserver:
+        image: tjozsa/seleniumsink
+        build: .
+        ports:
+            - 9999:80

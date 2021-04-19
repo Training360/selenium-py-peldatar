@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Add and sum total cart</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<form name="order" id="order">
+    <table>
+        <tr>
+            <td>
+                <label for="product">Product:</label>
+            </td>
+            <td>
+                <input id="product" name="product" title="Please enter only alphabetic characters" type="text" size="28" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="quantity">Quantity:</label>
+            </td>
+            <td>
+                <input id="quantity" name="quantity" title="Enter item quantity" width="196px" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="price">Price:</label>
+            </td>
+            <td>
+                <input id="price" name="price" title="Please enter only numeric characters" size="28" />
+            </td>
+        </tr>
+    </table>
+    <input type="reset" name="reset" id="resetbtn" class="resetbtn" value="Reset" />
+    <button type="button" onClick="updateForm();"/>Add To Table</button>
+</form>
+<br>
+
+<table id="results" width="360">
+    <thead>
+    <tr>
+        <th scope="col" width="120">Products</th>
+        <th scope="col" width="120">Quantity</th>
+        <th scope="col" width="120">Price</th>
+    </tr>
+    </thead>
+</table>
+
+<table id="resultTotals" width="360">
+<tr>
+    <td scope="col" width="120">Totals</td>
+    <td scope="col" width="120"><div id="qtyTotals"></div></td>
+    <td scope="col" width="120"><div id="priceTotals"></div></td>
+</tr>
+</table>
+<!-- partial -->
+  <script  src="js/filltablewithsum.js"></script>
+
+</body>
+</html>

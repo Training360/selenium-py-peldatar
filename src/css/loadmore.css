@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+  }
+}
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.load-more-button {
+  margin: 4rem 2rem;
+  text-align: center;
+}
+.load-more-button button {
+  background: transparent;
+  border: 2px solid black;
+  padding: 1rem 1.5rem;
+}
+.load-more-button button:hover {
+  cursor: pointer;
+}

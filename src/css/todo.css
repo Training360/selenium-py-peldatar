@@ -1,0 +1,20 @@
+@import "bourbon";
+
+.well {
+  font-size: 32px;
+  
+}
+.done-true {
+	text-decoration: line-through;
+	color: grey;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+  margin: 15px;
+}

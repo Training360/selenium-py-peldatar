@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Material Design Right Click Menu (flexbox icons)</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="css/contextmenu.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<input id="flex-example" type="checkbox" /><label for="flex-example">Show flexbox extras</label>
+<div class="title">
+  Right Click to see the magic
+</div>
+<div id="rc-context-menu">
+  <div class="menu-item" data-rc-launch="first">
+    <i class="material-icons">looks_one</i>
+    <div class="ripple">
+      First thing
+    </div>
+  </div>
+  <div class="menu-item" data-rc-launch="second">
+    <i class="material-icons">looks_two</i>
+    <div class="ripple">
+      Second thing
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="menu-item" data-rc-launch="cut">
+    <i class="material-icons">content_cut</i>
+    <div class="ripple">
+      Cut
+    </div>
+  </div>
+  <div class="menu-item" data-rc-launch="copy">
+    <i class="material-icons">content_copy</i>
+    <div class="ripple">
+      Copy
+    </div>
+  </div>
+  <div class="menu-item" data-rc-launch="paste">
+    <i class="material-icons">content_paste</i>
+    <div class="ripple">
+      Paste
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="menu-item" data-rc-launch="third">
+    <div class="ripple">
+      Third thing
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="label">
+    Share:
+  </div>
+  <div class="icon-group">
+    <div class="menu-icon ripple" data-rc-launch="icon1">
+      <i class="material-icons">add</i>
+    </div>
+    <div class="menu-icon ripple" data-rc-launch="icon2">
+      <i class="material-icons">share</i>
+    </div>
+    <div class="menu-icon ripple" data-rc-launch="icon3">
+      <i class="material-icons">content_copy</i>
+    </div>
+    <div class="menu-icon ripple" data-rc-launch="icon4">
+      <i class="material-icons">info_outline</i>
+    </div>
+    <div class="menu-icon ripple" data-rc-launch="icon5">
+      <i class="material-icons">settings</i>
+    </div>
+    <div class="menu-icon ripple flex-only" data-rc-launch="icon4">
+      <i class="material-icons">info_outline</i>
+    </div>
+    <div class="menu-icon ripple flex-only" data-rc-launch="icon5">
+      <i class="material-icons">settings</i>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script  src="js/contextmenu.js"></script>
+
+</body>
+</html>

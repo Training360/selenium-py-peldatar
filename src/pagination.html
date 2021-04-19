@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Pagination with Angular and Bootstrap</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/pagination.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body ng-app='DemoPagineo' ng-cloack>
+  <br>
+  <div class="container" ng-controller='tablaUsuarios'>
+    <h1>Pagination with Angular and Bootstrap</h1>
+    <br>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <table ng-init='configPages()' class='table'>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>First name</th>
+              <th>Second name</th>
+              <th>Surname</th>
+              <th>Second Surname</th>
+              <th>Birth date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat='usuario in usuarios | startFromGrid: currentPage * pageSize | limitTo: pageSize' , ng-click='seleccionarUsuario(usuario.id)'>
+              <td>{{usuario.id}}</td>
+              <td>{{usuario.primernombre}}</td>
+              <td>{{usuario.segundonombre}}</td>
+              <td>{{usuario.primerapellido}}</td>
+              <td>{{usuario.segundoapellido}}</td>
+              <td>{{usuario.fechanacimiento}}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class='btn-group'>
+          <button type='button' class='btn btn-default' ng-disabled='currentPage == 0' ng-click='currentPage = currentPage - 1'>&laquo;</button>
+          <button type='button' class='btn btn-default' ng-disabled='currentPage == page.no - 1' ng-click='setPage(page.no)' ng-repeat='page in pages'>{{page.no}}</button>
+          <button type='button' class='btn btn-default' ng-disabled='currentPage >= usuarios.length/pageSize - 1' , ng-click='currentPage = currentPage + 1'>&raquo;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js'></script>
+<script  src="js/pagination.js"></script>
+
+</body>
+</html>
