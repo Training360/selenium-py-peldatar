@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/trickybuttons.css">
+  </head>
+  <body>
+    <h1>Tricky Buttons</h4>
+    <label class="switch">
+      <input type="checkbox" id="randomized" onchange="onSetupChanged();">
+      <span class="slider round"></span>
+    </label>
+    Random order: will reorder the fields each time you submit data
+    <br/>
+    <br/>
+    
+    <label class="switch">
+      <input type="checkbox" id="difficulty" onchange="onSetupChanged();">
+      <span class="slider round"></span>
+    </label>
+    Difficulty HARD: will not use human readable #id, good luck
+    <br/>
+    <br/>
+
+    <form id="trickyForm" onsubmit="return false"></form>
+    <br/>
+    <label id="result">[Click any button]</label>
+    <script  src="js/trickybuttons.js"></script>
+  </body>
+</html>
