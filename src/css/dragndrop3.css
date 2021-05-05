@@ -1,0 +1,36 @@
+#dragThis {
+    width: 8em;
+    height: 8em;
+    padding: 0.5em;
+    border: 3px solid #ccc;
+    border-radius: 0 1em 1em 1em;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.5);
+}
+
+#dragThis span {
+    float: right;
+}
+
+#dragThis span:after {
+    content: "px";
+}
+
+li {
+    clear: both;
+    border-bottom: 1px solid #ccc;
+    line-height: 1.2em;
+}
+
+#dropHere {
+    width: 12em;
+    height: 12em;
+    padding: 0.5em;
+    border: 3px solid #f90;
+    border-radius: 1em;
+    margin: 0 auto;
+}
+
+.done{
+    border: 3px solid green;
+}

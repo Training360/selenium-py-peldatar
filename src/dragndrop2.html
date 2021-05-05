@@ -17,9 +17,9 @@
     <div ng-repeat="list in vm.lists" class="list medium-3 columns">
       <div class="inner">
         <h2 class="title">{{list.title}}</h2>
-        <ul dnd-list="list.items" class="items no-bullet">
+        <ul id="{{list.title}}" dnd-list="list.items" class="items no-bullet">
 
-          <li ng-repeat="item in list.items" dnd-draggable="item" dnd-moved="list.items.splice($index, 1)" dnd-effect-allowed="move" dnd-selected="vm.lists.selected = item" ng-class="{'selected': models.selected === item}" class="item">
+          <li id="{{item.title}}" ng-repeat="item in list.items" dnd-draggable="item" dnd-moved="list.items.splice($index, 1)" dnd-effect-allowed="move" dnd-selected="vm.lists.selected = item" ng-class="{'selected': models.selected === item}" class="item">
 
             <a ui-sref="lists.items-show({listId: '{{list.id}}', itemId: '{{item.id}}'})">
               <h3 class="title">{{item.title}}</h3>

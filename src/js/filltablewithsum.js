@@ -12,7 +12,7 @@ function updateForm() {
     priceTotal = priceTotal + parseInt(price);
     document.getElementById("priceTotals").innerHTML=priceTotal;
 
-    var table=document.getElementById("results");
+    var table=document.getElementById("results").getElementsByTagName("tbody")[0];
     var row=table.insertRow(-1);
     var cell1=row.insertCell(0);
     var cell2=row.insertCell(1);
