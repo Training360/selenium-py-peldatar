@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100%, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="card mb-3">
+        <div class="card-header">
+            <i class="headericon"></i>
+            <h2 class="title">Practice Alerts</h2>
+        </div>
+        <style>
+            div.col-lg-6 input {
+
+                margin: 20px;
+
+            }
+
+            .dropbtn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                border-bottom: 2px solid #2a2424cc;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdown:hover .dropbtn {
+                background-color: #3e8e41;
+            }
+        </style>
+        <div class="col-lg-6" style="display: flex;"><br>
+            <input type="button" name="alert" value="Alert" onclick="alertbox();">
+            <input type="button" name="confirmation" value="Confirmation Box" onclick="confirmbox();">
+            <input type="button" name="prompt" value="Prompt" onclick="promptbox();">
+        </div>
+        <div>
+            <p id="demo"></p>
+        </div>
+        <div class="col-lg-6" style="display: flex;"><br>
+            <input type="button" id="double-click" value="Double Click Me">
+        </div>
+    </div>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#double-click").dblclick(function () {
+                alert("You double clicked me!!!, You got to be kidding me");
+            });
+        });
+        function alertbox() {
+            alert("I am alert");
+        }
+        function promptbox() {
+            var input = prompt("I am prompt");
+
+            if (input != null) {
+                document.getElementById("demo").innerHTML =
+                    "You entered: " + input;
+            }
+        }
+        function confirmbox() {
+            confirm("I am confirm");
+        }
+    </script>
+
+</body>
+
+</html>
