@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" media="screen" href="https://fedora.teachablecdn.com/assets/bootstrap-d989a3f5b1f1bca0585c204acf93e7e781ab3db1f16f403a5e77336f1c4d4c0f.css" data-turbolinks-track="true" /><link href="https://themes2.teachablecdn.com/themecss/production/base.css?_=eb67aca9da0a&amp;brand_course_heading=%23ffffff&amp;brand_heading=%232b3636&amp;brand_homepage_heading=%23ffffff&amp;brand_navbar_fixed_text=%23ffffff&amp;brand_navbar_text=%23ffffff&amp;brand_primary=%232b3636&amp;brand_secondary=%2309A59A&amp;brand_text=%232b3636&amp;logged_out_homepage_background_image_overlay=0.0&amp;show_login=true&amp;show_signup=true" rel="stylesheet" data-turbolinks-track="true"></link> -->
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/windowopengame.js"></script>
+</head>
+<body>
+  <h1>Window open game</h1>
+  The color you are looking for is:
+  <p id="target_color"></p>
+  Number of guesses made:
+  <p id="numberOfGuesses">0</p>
+    <table style="width:100%">
+      <tr>
+        <td><button id="0" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="1" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="2" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="3" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="4" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="5" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="6" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="7" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="8" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="9" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="10" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="11" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="12" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="13" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="14" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="15" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="16" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="17" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="18" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="19" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="20" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="21" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="22" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="23" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="24" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="25" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="26" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="27" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="28" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="29" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="30" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="31" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="32" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="33" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="34" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="35" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="36" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="37" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="38" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="39" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="40" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="41" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="42" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="43" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="44" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="45" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="46" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="47" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="48" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="49" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="50" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="51" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="52" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="53" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="54" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="55" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="56" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="57" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="58" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="59" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="60" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="61" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="62" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="63" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="64" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="65" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="66" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="67" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="68" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="69" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="70" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="71" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="72" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="73" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="74" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="75" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="76" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="77" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="78" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="79" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="80" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="81" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="82" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="83" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="84" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="85" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="86" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="87" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="88" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="89" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+      </tr>
+      <tr>
+        <td><button id="90" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="91" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="92" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="93" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="94" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="95" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="96" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="97" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="98" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+        <td><button id="99" onclick="randomWindow(this.id)">&nbsp;&nbsp;&nbsp;&nbsp;?&nbsp;&nbsp;&nbsp;&nbsp;</button></td>
+      </tr>
+    </table>
+    <br />
+  </div>
+</body>
+</html>
